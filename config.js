@@ -42,9 +42,9 @@ const WEDDING_CONFIG = {
 
   // Cada valor puede ser un texto o una lista: ["Nombre del papá", "Nombre de la mamá"]
   family: {
-    groomParents: "Por confirmar",
-    brideParents: "Por confirmar",
-    godparents: "Por confirmar"
+    groomParents: ["Lluvia Gabriela Domínguez Alaníz", "Juan Daniel Cota Corrales"],
+    brideParents: ["Enrique Cano López", "Blanca Patricia Ruvalcaba Ramírez"],
+    godparents: ["Margarita Flores López", "Manuel Ramírez"]
   },
 
   itinerary: [
