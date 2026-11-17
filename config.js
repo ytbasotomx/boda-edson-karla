@@ -43,7 +43,7 @@ const WEDDING_CONFIG = {
   // Cada valor puede ser un texto o una lista: ["Nombre del papá", "Nombre de la mamá"]
   family: {
     groomParents: ["Lluvia Gabriela Domínguez Alaníz", "Juan Daniel Cota Corrales"],
-    brideParents: ["Blanca Patricia Ruvalcaba Ramírezz", "Enrique Cano López"],
+    brideParents: ["Enrique Cano López", "Blanca Patricia Ruvalcaba Ramírez"],
     godparents: ["Margarita Flores López", "Manuel Ramírez"]
   },
 
@@ -96,9 +96,21 @@ const WEDDING_CONFIG = {
     }
   },
 
-  // Agrega las fotos en assets y registra sus rutas aquí. La primera se muestra en formato vertical.
-  // Ejemplo: { src: "assets/pareja-1.jpg", alt: "Edson y Karla en la playa" }
-  gallery: [],
+  // Fotos de "Nuestra historia", guardadas en assets/fotos/. Se acomodan en bloques de cinco:
+  // la 1.ª, 6.ª, 11.ª... y la 10.ª, 20.ª... se ven en formato alto, así que conviene que sean verticales.
+  // La cuadrícula queda completa con 5, 10 o 15 fotos. La ruta distingue mayúsculas: 1.jpeg no es 1.JPEG.
+  gallery: [
+    { src: "assets/fotos/1.jpeg", alt: "Edson y Karla" },
+    { src: "assets/fotos/2.jpeg", alt: "Edson y Karla" },
+    { src: "assets/fotos/3.jpeg", alt: "Edson y Karla" },
+    { src: "assets/fotos/4.jpeg", alt: "Edson y Karla" },
+    { src: "assets/fotos/5.jpeg", alt: "Edson y Karla" },
+    { src: "assets/fotos/6.jpeg", alt: "Edson y Karla" },
+    { src: "assets/fotos/7.jpeg", alt: "Edson y Karla" },
+    { src: "assets/fotos/8.jpeg", alt: "Edson y Karla" },
+    { src: "assets/fotos/9.jpeg", alt: "Edson y Karla" },
+    { src: "assets/fotos/10.jpeg", alt: "Edson y Karla" }
+  ],
 
   // Ejemplo: { name: "Liverpool", detail: "Evento 12345678", url: "https://..." }
   giftLinks: [],
