@@ -43,7 +43,7 @@ const WEDDING_CONFIG = {
   // Cada valor puede ser un texto o una lista: ["Nombre del papá", "Nombre de la mamá"]
   family: {
     groomParents: ["Lluvia Gabriela Domínguez Alaníz", "Juan Daniel Cota Corrales"],
-    brideParents: ["Enrique Cano López", "Blanca Patricia Ruvalcaba Ramírez"],
+    brideParents: ["Blanca Patricia Ruvalcaba Ramírezz", "Enrique Cano López"],
     godparents: ["Margarita Flores López", "Manuel Ramírez"]
   },
 
