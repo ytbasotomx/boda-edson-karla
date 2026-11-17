@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4E5236">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Invitación a la boda de Edson Cota y Karla Cano. Acompáñanos a celebrar este día especial.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Edson &amp; Karla | Nuestra boda">
+  <meta property="og:description" content="Sábado 20 de noviembre de 2027. Abre tu invitación.">
+  <!-- Al publicar, agrega la URL completa de una foto para la vista previa en WhatsApp:
+  <meta property="og:image" content="https://TU-USUARIO.github.io/TU-REPOSITORIO/assets/portada.jpg"> -->
+  <title>Edson Cota &amp; Karla Cano | Nuestra boda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..600;1,300..600&family=Jost:wght@300..600&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+  <!-- Íconos propios en SVG: no dependen de ninguna librería externa -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-bow" viewBox="0 0 120 92">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 30C45 9 15 5 12 23c-3 17 30 17 48 7"/>
+        <path d="M60 30c15-21 45-25 48-7 3 17-30 17-48 7"/>
+        <path d="M58 33c-7 17-18 32-33 50"/>
+        <path d="M62 33c5 18 16 31 34 45"/>
+      </g>
+      <ellipse cx="60" cy="30.5" rx="4.6" ry="5.6" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-rings" viewBox="0 0 24 24"><circle cx="9" cy="13.5" r="5.5"/><circle cx="15" cy="13.5" r="5.5"/><path d="M7.5 6.2 9 4l1.5 2.2"/></symbol>
+    <symbol id="i-glass" viewBox="0 0 24 24"><path d="M6 4h12c0 5-2.5 8-6 8S6 9 6 4zM12 12v7.5M8 20h8"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.3"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 20V9.5L12 4l8 5.5V20M9.5 20v-6h5v6M2.5 20h19"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="1"/><path d="M3 7h18v3H3zM12 7v13M12 7C10 3 6 4 7.5 6.5M12 7c2-4 6-3 4.5-.5"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l1.5-2.5h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.800 7L4 20l1.5-4.200A8 8 0 1 1 20 11.5z"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="1.5"/><path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-9A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 5.5 16H8"/></symbol>
+  </svg>
+
+  <!-- ================= SOBRE DE APERTURA ================= -->
+  <div class="opening-screen" id="openingScreen">
+    <div class="envelope-wrap">
+      <p class="opening-kicker">Tenemos el honor de invitarte a nuestra boda</p>
+      <button class="envelope" id="envelope" type="button" aria-label="Abrir la invitación de Edson y Karla">
+        <span class="envelope-back"></span>
+        <span class="envelope-letter">
+          <span class="letter-small">Nos casamos</span>
+          <span class="letter-names">Edson &amp; Karla</span>
+          <span class="letter-date" data-date="short"></span>
+        </span>
+        <span class="envelope-flap"><span></span></span>
+        <span class="envelope-front"></span>
+        <span class="envelope-base"></span>
+        <span class="envelope-ribbon"><svg class="bow" aria-hidden="true"><use href="#i-bow"/></svg></span>
+      </button>
+      <button class="text-button" id="openInvitation" type="button">Abrir invitación</button>
+    </div>
+  </div>
+
+  <!-- ================= ENCABEZADO ================= -->
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#inicio" aria-label="Inicio">E <span>&amp;</span> K</a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+      <svg class="icon" aria-hidden="true"><use id="menuIcon" href="#i-menu"/></svg>
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="Secciones">
+      <a href="#bienvenida">Bienvenida</a>
+      <a href="#fecha">La fecha</a>
+      <a href="#ubicaciones">Ubicaciones</a>
+      <a href="#itinerario">Itinerario</a>
+      <a href="#historia">Nuestra historia</a>
+      <a class="nav-cta" href="#rsvp">Confirmar</a>
+    </nav>
+  </header>
+
+  <noscript><p class="no-script">Esta invitación necesita JavaScript para mostrar la fecha, los lugares y tu pase. Actívalo en tu navegador y recarga la página.</p></noscript>
+
+  <main id="contenido">
+
+    <!-- 1. PORTADA -->
+    <section class="hero" id="inicio">
+      <div class="hero-frame">
+        <svg class="bow" aria-hidden="true"><use href="#i-bow"/></svg>
+        <p class="eyebrow">Una celebración del amor</p>
+        <h1 class="hero-names" tabindex="-1"><span>Edson</span><i>&amp;</i><span>Karla</span></h1>
+        <p class="hero-subtitle">¡Nos casamos!</p>
+        <span class="rule" aria-hidden="true"></span>
+        <p class="hero-date" data-date="long"></p>
+        <p class="hero-place" id="heroPlace"></p>
+        <a class="button button--outline" href="#bienvenida">Descubre la invitación</a>
+      </div>
+      <p class="hero-bottom">Con todo nuestro cariño</p>
+    </section>
+
+    <!-- 2. BIENVENIDA -->
+    <section class="section welcome-section" id="bienvenida">
+      <div class="section-mark" aria-hidden="true">E <span>&amp;</span> K</div>
+      <p class="eyebrow">El comienzo de siempre</p>
+      <h2>Hay momentos que<br><em>merecen compartirse.</em></h2>
+      <p class="body-copy">Con mucha alegría queremos invitarte a celebrar el inicio de una nueva etapa en nuestras vidas. Nos haría muy felices contar con tu presencia en un día tan especial.</p>
+      <p class="signature">Edson &amp; Karla</p>
+    </section>
+
+    <!-- 3. FAMILIA -->
+    <section class="section tone-champagne family-section" id="familia">
+      <div class="section-heading">
+        <p class="eyebrow">Con la bendición de</p>
+        <h2>Nuestras familias</h2>
+        <p class="section-intro">Agradecemos a quienes nos han acompañado en este camino.</p>
+      </div>
+      <div class="family-grid">
+        <article class="family-card">
+          <p class="eyebrow">Padres del novio</p>
+          <h3 id="groomParents"></h3>
+        </article>
+        <article class="family-card">
+          <p class="eyebrow">Padres de la novia</p>
+          <h3 id="brideParents"></h3>
+        </article>
+        <article class="family-card">
+          <p class="eyebrow">Padrinos</p>
+          <h3 id="godparents"></h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. FECHA Y CUENTA REGRESIVA -->
+    <section class="section tone-olive date-section" id="fecha">
+      <div class="date-layout">
+        <div class="date-main">
+          <p class="eyebrow">Reserva la fecha</p>
+          <h2 class="date-number" data-date="split"></h2>
+          <p class="date-day" data-date="weekday"></p>
+          <div class="countdown" id="countdown" aria-live="off">
+            <div><strong id="days">0</strong><span>Días</span></div>
+            <div><strong id="hours">00</strong><span>Horas</span></div>
+            <div><strong id="minutes">00</strong><span>Minutos</span></div>
+            <div><strong id="seconds">00</strong><span>Segundos</span></div>
+          </div>
+          <div class="button-row">
+            <a class="button button--light" id="googleCalendar" href="https://calendar.google.com/" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg> Google Calendar
+            </a>
+            <a class="button button--ghost" id="downloadCalendar" href="#" download="Boda-Edson-Cota-y-Karla-Cano.ics" hidden>Apple u Outlook (.ics)</a>
+          </div>
+          <p class="provisional-note">Fecha confirmada · Horarios provisionales</p>
+        </div>
+        <div class="calendar-card" id="calendar"></div>
+      </div>
+    </section>
+
+    <!-- 5. UBICACIONES -->
+    <section class="section locations-section" id="ubicaciones">
+      <div class="section-heading">
+        <p class="eyebrow">Nos encantaría verte</p>
+        <h2>¿Dónde nos vemos?</h2>
+        <p class="section-intro">Por ahora, ambos eventos están registrados en la misma dirección. Los datos podrán actualizarse más adelante.</p>
+      </div>
+      <div class="location-grid">
+        <article class="location-card">
+          <div class="location-icon"><svg class="icon" aria-hidden="true"><use href="#i-rings"/></svg></div>
+          <p class="eyebrow">Ceremonia</p>
+          <h3 id="ceremonyName">La ceremonia</h3>
+          <p class="location-time" id="ceremonyTime"></p>
+          <p class="location-address" id="ceremonyAddress"></p>
+          <div class="location-map" id="ceremonyMapEmbed" hidden></div>
+          <a class="button button--outline" id="ceremonyMap" href="#" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Cómo llegar
+          </a>
+        </article>
+        <article class="location-card">
+          <div class="location-icon"><svg class="icon" aria-hidden="true"><use href="#i-glass"/></svg></div>
+          <p class="eyebrow">Celebración</p>
+          <h3 id="receptionName">La recepción</h3>
+          <p class="location-time" id="receptionTime"></p>
+          <p class="location-address" id="receptionAddress"></p>
+          <div class="location-map" id="receptionMapEmbed" hidden></div>
+          <a class="button button--outline" id="receptionMap" href="#" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Cómo llegar
+          </a>
+        </article>
+      </div>
+      <p class="small-note">Los horarios y la ubicación son provisionales y podrán modificarse.</p>
+    </section>
+
+    <!-- 6. ITINERARIO -->
+    <section class="section tone-sage itinerary-section" id="itinerario">
+      <div class="section-heading">
+        <p class="eyebrow">Un día para recordar</p>
+        <h2>Itinerario</h2>
+        <p class="section-intro">Estos son los momentos que tenemos preparados para compartir contigo.</p>
+      </div>
+      <ol class="timeline" id="itineraryList"></ol>
+      <p class="small-note">Programa provisional, sujeto a cambios.</p>
+    </section>
+
+    <!-- 7. HOSPEDAJE -->
+    <section class="section lodging-section" id="hospedaje">
+      <div class="section-heading">
+        <p class="eyebrow">Para quienes nos acompañan de lejos</p>
+        <h2>Hospedaje</h2>
+        <p class="section-intro" id="lodgingIntro">Próximamente compartiremos algunas opciones de alojamiento cercanas al evento.</p>
+      </div>
+      <div id="hotelList">
+        <div class="placeholder-panel">
+          <svg class="icon" aria-hidden="true"><use href="#i-home"/></svg>
+          <p>Recomendaciones de hospedaje</p>
+          <small>Información pendiente de confirmar.</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. NUESTRA HISTORIA -->
+    <section class="section tone-champagne story-section" id="historia">
+      <div class="section-heading">
+        <p class="eyebrow">Un poco de nosotros</p>
+        <h2>Nuestra historia</h2>
+        <p class="section-intro" id="storyIntro">Cada fotografía guarda un recuerdo. Pronto compartiremos algunos de nuestros favoritos contigo.</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="photo photo-tall photo-empty"><b>E &amp; K</b><span>Fotografía 01</span></div>
+        <div class="photo photo-empty"><b>E &amp; K</b><span>Fotografía 02</span></div>
+        <div class="photo photo-empty"><b>E &amp; K</b><span>Fotografía 03</span></div>
+        <div class="photo photo-empty"><b>E &amp; K</b><span>Fotografía 04</span></div>
+        <div class="photo photo-empty"><b>E &amp; K</b><span>Fotografía 05</span></div>
+      </div>
+      <p class="small-note" id="storyNote">Las fotografías se agregarán cuando estén disponibles.</p>
+    </section>
+
+    <!-- 9. CÓDIGO DE VESTIMENTA -->
+    <section class="section tone-olive dress-section" id="vestimenta">
+      <div class="dress-content">
+        <p class="eyebrow">Código de vestimenta</p>
+        <h2 id="dressTitle">Formal</h2>
+        <span class="rule" aria-hidden="true"></span>
+        <p id="dressDescription"></p>
+        <p class="dress-note" id="dressNote"></p>
+        <div class="palette-block" id="paletteBlock" hidden>
+          <p class="eyebrow">Los colores de nuestra boda</p>
+          <ul class="palette" id="palette"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. MESA DE REGALOS -->
+    <section class="section gifts-section" id="regalos">
+      <div class="section-heading">
+        <p class="eyebrow">Tu presencia es nuestro mejor regalo</p>
+        <h2>Mesa de regalos</h2>
+        <p class="section-intro" id="giftIntro">Si deseas tener un detalle con nosotros, próximamente compartiremos aquí las opciones de nuestra mesa de regalos.</p>
+      </div>
+      <div class="gift-links" id="giftLinks">
+        <div class="placeholder-panel">
+          <svg class="icon" aria-hidden="true"><use href="#i-gift"/></svg>
+          <p>Mesa de regalos</p>
+          <small>Información pendiente de confirmar.</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. GALERÍA EN VIVO -->
+    <section class="section tone-sage live-gallery-section" id="galeria-viva">
+      <div class="live-gallery-card">
+        <p class="eyebrow">Tus recuerdos también cuentan</p>
+        <h2>Galería en vivo</h2>
+        <p id="liveGalleryText">Queremos ver la celebración desde tus ojos. Próximamente habilitaremos un espacio para que puedas compartir tus fotografías del evento.</p>
+        <div class="qr-box" id="qrBox">
+          <svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>
+        </div>
+        <span class="qr-caption" id="qrCaption">Código QR por activar</span>
+        <a class="button button--light" id="liveGalleryLink" href="#" target="_blank" rel="noopener" hidden>Subir mis fotos</a>
+      </div>
+    </section>
+
+    <!-- 12. CONFIRMACIÓN -->
+    <section class="section rsvp-section" id="rsvp">
+      <div class="section-heading">
+        <p class="eyebrow">Tu respuesta es importante</p>
+        <h2>¿Nos acompañas?</h2>
+        <p class="section-intro" id="guestGreeting">Nos encantará contar contigo. Confirma tu asistencia.</p>
+      </div>
+      <div class="form-card">
+        <div class="guest-summary" id="guestSummary" hidden></div>
+        <form id="rsvpForm" novalidate>
+          <div id="generalFields" class="fields">
+            <div class="field">
+              <label for="guestName">Nombre del invitado</label>
+              <input id="guestName" name="guestName" type="text" placeholder="Escribe tu nombre" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="attendance">¿Podrás acompañarnos?</label>
+              <select id="attendance" name="attendance">
+                <option value="">Selecciona una respuesta</option>
+                <option value="Sí, asistiré">¡Sí, ahí estaré!</option>
+                <option value="No podré asistir">Lo siento, no podré asistir</option>
+              </select>
+            </div>
+          </div>
+          <div id="guestChoices" class="guest-choices" hidden></div>
+          <div class="field">
+            <label for="rsvpMessage">Mensaje para los novios (opcional)</label>
+            <textarea id="rsvpMessage" name="rsvpMessage" rows="3" placeholder="Escribe un mensaje"></textarea>
+          </div>
+          <p class="form-status" id="rsvpStatus" role="status"></p>
+          <button class="button button--full" type="submit">Preparar confirmación</button>
+          <div class="message-panel" id="rsvpPanel" hidden></div>
+          <p class="form-help" id="rsvpHelp">Tu confirmación se envía por WhatsApp. No se guarda en ninguna base de datos.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 13. BUENOS DESEOS -->
+    <section class="section tone-champagne wishes-section" id="deseos">
+      <div class="section-heading">
+        <p class="eyebrow">Unas palabras para el futuro</p>
+        <h2>Buenos deseos</h2>
+        <p class="section-intro">Déjanos un mensaje para recordar este momento.</p>
+      </div>
+      <div class="form-card">
+        <form id="wishesForm" novalidate>
+          <div class="field">
+            <label for="wishName">Tu nombre</label>
+            <input id="wishName" type="text" placeholder="¿Quién nos escribe?" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="wishText">Tu mensaje</label>
+            <textarea id="wishText" rows="4" placeholder="Escribe tus buenos deseos"></textarea>
+          </div>
+          <p class="form-status" id="wishStatus" role="status"></p>
+          <button class="button button--outline button--full" type="submit">Preparar mensaje</button>
+          <div class="message-panel" id="wishPanel" hidden></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= PIE ================= -->
+  <footer class="site-footer">
+    <svg class="bow" aria-hidden="true"><use href="#i-bow"/></svg>
+    <p class="footer-names">Edson &amp; Karla</p>
+    <p class="footer-date" data-date="short"></p>
+    <p class="footer-small">Gracias por ser parte de nuestra historia</p>
+  </footer>
+
+  <!-- ================= MÚSICA Y VISOR DE FOTOS ================= -->
+  <button class="music-button" id="musicButton" type="button" aria-label="Pausar música" hidden>
+    <svg class="icon" aria-hidden="true"><use id="musicIcon" href="#i-pause"/></svg>
+  </button>
+  <audio id="backgroundMusic" loop preload="none"></audio>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Fotografía ampliada">
+    <button class="lightbox-close" type="button" aria-label="Cerrar fotografía"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    <img id="lightboxImage" src="" alt="">
+  </dialog>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
