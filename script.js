@@ -201,8 +201,22 @@
     const lightboxImage = $("#lightboxImage");
     const photos = config.gallery.map((photo, index) => {
       const alt = photo.alt || `Fotografía de ${config.couple.shortNames}`;
-      const button = el("button", { class: index === 0 ? "photo photo-tall" : "photo", type: "button", "aria-label": `Ampliar: ${alt}` },
-        el("img", { src: photo.src, alt, loading: "lazy", decoding: "async" }));
+      // Bloques de cinco fotos: una alta y cuatro chicas. La alta va a la izquierda
+      // en un bloque y a la derecha en el siguiente, así 5, 10 o 15 fotos llenan la cuadrícula.
+      const block = Math.floor(index / 5);
+      const tallStart = index % 5 === 0 && block % 2 === 0;
+      const tallEnd = index % 5 === 4 && block % 2 === 1;
+      const className = tallStart ? "photo photo-tall" : tallEnd ? "photo photo-tall photo-tall--end" : "photo";
+      const image = el("img", { src: photo.src, alt, loading: "lazy", decoding: "async" });
+      const button = el("button", { class: className, type: "button", "aria-label": `Ampliar: ${alt}` }, image);
+      if (tallStart || tallEnd) button.style.setProperty("--row", String(block * 2 + 1));
+      // Si una ruta está mal escrita, se muestra cuál falta en lugar de un recuadro roto.
+      image.addEventListener("error", () => {
+        console.warn(`No se encontró la foto ${photo.src}. Revisa el nombre en config.js (mayúsculas y extensión).`);
+        button.disabled = true;
+        button.classList.add("photo-empty", "photo-missing");
+        button.replaceChildren(el("b", { text: "E & K" }), el("span", { text: `No se encontró: ${photo.src}` }));
+      });
       button.addEventListener("click", () => {
         lightboxImage.src = photo.src;
         lightboxImage.alt = alt;
